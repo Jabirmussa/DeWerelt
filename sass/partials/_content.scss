@@ -43,33 +43,46 @@
         align-items: center;
         .hero-content{
             max-width: 33ch;
-            margin-bottom: 30px;
             @include breakpoint-tablet {
                 max-width: 56ch;
-                margin-bottom: 90px;
             }
             h1{
                 color: $color-white;
             }
             .btn{
                 svg{
-                    position: relative;
-                    top: 1px;
+                    position: absolute;
+                    top: 50%;
+                    left: 24px;
+                    transform: translateY(-50%);
                     width: 18px;
-                    right: 0;
-                    margin-left: 18px;
                     transition: all 0.4s ease-in-out;
-                    @include breakpoint-tablet {
-                        top: 4px;
-                        width: 46px;
-                    }
                 }
                 &:hover{
                     svg{
-                        right: -20px;
+                        left: 30px;
                     }
                 }
             }
+        }
+    }
+}
+
+.btns{
+    display: flex;
+    gap: 16px;
+}
+
+
+.selling-points{
+    background: #CCCCCC url(/images/background.png) no-repeat center center;
+    background-size: cover;
+    .wrapper{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 48px;
+        .selling-points-item{
+            max-width: 292px;
         }
     }
 }

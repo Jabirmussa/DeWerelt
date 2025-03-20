@@ -1,11 +1,12 @@
 %control-properties {
+    display: inline-block;
     transition: padding 0.3s ease-in-out;
     position: relative;
     font-family: $font-family-default;
     font-size: rem(17px);
     background: $color-white;
     color: $color-black;
-    padding: rem(12px)  rem(54px) rem(24px) 0;
+    padding: rem(16px)  rem(24px) rem(16px) 54px;
     text-decoration: none;
     border-radius: 0;
     line-height: 1;
@@ -14,8 +15,8 @@
 }
 
 %focus-properties {
-    color: $color-white;
-    background: $color-black;
+    // color: $color-white;
+    // background: $color-black;
 }
 
 .btn-center{
