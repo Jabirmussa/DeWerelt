@@ -53,6 +53,22 @@
             h1{
                 color: $color-white;
             }
+            .btn{
+                padding: rem(16px)  rem(24px) rem(16px) 54px;
+                svg{
+                    position: absolute;
+                    top: 50%;
+                    left: 24px;
+                    transform: translateY(-50%);
+                    width: 18px;
+                    transition: all 0.4s ease-in-out;
+                }
+                &:hover{
+                    svg{
+                        left: 30px;
+                    }
+                }
+            }
         }
     }
 }
@@ -109,7 +125,7 @@
 
 .overview{
     .wrapper{
-        @include grid-layout(4, 32px, 32px);
+        @include grid-layout(4, 24px, 24px);
         @include breakpoint-tablet{
             @include grid-layout(12, 32px, 32px);
         }

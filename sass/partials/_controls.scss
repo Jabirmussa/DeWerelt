@@ -6,11 +6,10 @@
     font-size: rem(17px);
     background: $color-white;
     color: $color-black;
-    padding: rem(16px)  rem(24px) rem(16px) 54px;
+    padding: rem(16px)  rem(24px) rem(16px) 24px;
     text-decoration: none;
     border-radius: 0;
     line-height: 1;
-    overflow: hidden;
     border-radius: 5px;
 }
 
@@ -35,44 +34,29 @@
     border: 1px solid $color-black;
     background: transparent;
     color: $color-black;
-    padding: rem(16px)  rem(24px) rem(16px) 24px;
     svg{
         display: none;
     }
 }
 
-.btn.btn-grey{
+.btn-grey{
     background-color: $color-grey-light;
+    padding: rem(16px)  rem(24px) rem(16px) 8px;
     svg{
         position: absolute;
         top: 50%;
-        right: 24px ;
+        right: -5px ;
         transform: translateY(-50%);
         width: 18px;
         transition: all 0.4s ease-in-out;
     }
     &:hover{
         svg{
-            right: 30px;
+            right: -10px;
         }
     }
 }
 
-.btn{
-    svg{
-        position: absolute;
-        top: 50%;
-        left: 24px;
-        transform: translateY(-50%);
-        width: 18px;
-        transition: all 0.4s ease-in-out;
-    }
-    &:hover{
-        svg{
-            left: 30px;
-        }
-    }
-}
 
 form{
     position: relative;
