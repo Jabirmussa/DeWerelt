@@ -18,6 +18,7 @@
             right: 40px;
         }
     }
+
     .hero-image{
         z-index: 1;
         position: absolute;
@@ -43,7 +44,10 @@
         align-items: center;
         .hero-content{
             max-width: 33ch;
+            margin-top: auto;
+            margin-bottom: 40px;
             @include breakpoint-tablet {
+                margin: 0;
                 max-width: 56ch;
             }
             h1{
@@ -71,6 +75,7 @@
 .btns{
     display: flex;
     gap: 16px;
+    flex-wrap: wrap;
 }
 
 
@@ -83,6 +88,10 @@
         gap: 48px;
         .selling-points-item{
             max-width: 292px;
+            .selling-points-item-icon{
+                width: 48px;
+                aspect-ratio: 1 / 1;
+            }
         }
     }
 }
