@@ -55,15 +55,11 @@ body{
     margin: 2rem 0;
 
     @include breakpoint-tablet {
-        margin: 3rem 0;
-    }
-
-    @include breakpoint-desktop-small {
         margin: 4rem 0;
     }
 
-    @include breakpoint-desktop-large {
-        margin: 8rem 0;
+    @include breakpoint-desktop-small {
+        margin: 7rem 0;
     }
 }
 
@@ -71,14 +67,10 @@ body{
     padding: 2rem 0;
 
     @include breakpoint-tablet {
-        padding: 3rem 0;
-    }
-
-    @include breakpoint-desktop-small {
         padding: 4rem 0;
     }
 
-    @include breakpoint-desktop-large {
-        padding: 8rem 0;
+    @include breakpoint-desktop-small {
+        padding: 7rem 0;
     }
 }
