@@ -1,8 +1,15 @@
 @font-face {
     font-family:"brandon-grotesque";
     src:url("https://use.typekit.net/af/1281a1/000000000000000077359ded/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3") format("woff2"),url("https://use.typekit.net/af/1281a1/000000000000000077359ded/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3") format("woff"),url("https://use.typekit.net/af/1281a1/000000000000000077359ded/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3") format("opentype");
-    font-display:auto;font-style:normal;font-stretch:normal;
+    font-display:auto;
 }
+
+@font-face {
+    font-family:"brandon-grotesque";
+    src:url("https://use.typekit.net/af/bc4ba5/00000000000000007735d6bc/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff2"),url("https://use.typekit.net/af/bc4ba5/00000000000000007735d6bc/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff"),url("https://use.typekit.net/af/bc4ba5/00000000000000007735d6bc/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("opentype");
+    font-display:auto;font-style:normal;font-weight:700;font-stretch:normal;
+}
+
 @font-face {
     font-family: 'Blacker';
     src: url(/fonts/Extrabold.otf) format("opentype");
