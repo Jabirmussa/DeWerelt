@@ -97,18 +97,22 @@
             }
 
             .selling-points-item-icon{
-                width: 48px;
+                padding: 4px;
+                width: 40px;
                 aspect-ratio: 1 / 1;
                 margin-bottom: 12px;
                 @include breakpoint-tablet{
+                    width: 48px;
                     margin-bottom: 24px;
                 }
             }
             .selling-points-item-text{
                 h3{
                     font-size: rem(20px);
+                    margin-bottom: 24px;
                     @include breakpoint-tablet{
                         font-size: rem(24px);
+                        margin-bottom: 30px;
                     }
                 }
             }
