@@ -1,7 +1,8 @@
 h1, h2, h3, h4{
-    line-height: 1;
+    line-height: 120%;
     font-weight:700;
     color: $color-black;
+
 }
 
 h2, h3, h4{
@@ -11,23 +12,26 @@ h2, h3, h4{
 
 h1{
     font-family: $font-family-title;
-    font-size: rem(30px);
+    font-size: rem(40px);
     margin-bottom: rem(30px);
-    @include breakpoint-tablet{
+    letter-spacing: -1px;
+    line-height: rem(50px);
+    @include breakpoint-desktop-small{
         margin-bottom: rem(55px);
         font-size: rem(56px);
         line-height: rem(58px);
     }
 }
 
-h2{
+h2, h3{
     font-size: rem(32px);
-    margin-bottom: rem(10px);
+    margin-bottom: rem(20px);
+    @include breakpoint-tablet{
+        font-size: rem(40px);
+        margin-bottom: rem(24px);
+    }
 }
 
-h3{
-    font-size: rem(26px); 
-}
 
 h4{
     font-size: rem(22px);
@@ -42,6 +46,15 @@ em {
 }
 p{
     line-height: 24px;
+    margin-bottom: 24px;
+    @include breakpoint-tablet{
+        margin-bottom: 32px;
+    }
+}
+
+p:has(span){
+    font-weight: bold;
+    margin-bottom: 12px;
 }
 
 .text-container {

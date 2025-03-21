@@ -174,23 +174,6 @@
         @include breakpoint-tablet{
             padding: 36px 48px;
         }
-        p:has(span){
-            font-weight: bold;
-            margin-bottom: 8px;
-        }
-        h3{
-            font-size: rem(32px);   
-            margin-bottom: 24px;
-            @include breakpoint-tablet{
-                font-size: rem(40px);
-            }
-        }
-        p{
-            margin-bottom: 24px;
-            @include breakpoint-tablet{
-                margin-bottom: 32px;
-            }
-        }
     }
 }
 
