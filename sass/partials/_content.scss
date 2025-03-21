@@ -90,7 +90,10 @@
             justify-content: center;
         }
         .selling-points-item{
-            max-width: 292px;
+            max-width: 100%;
+            @include breakpoint-tablet{
+                max-width: 292px;
+            }
 
             .selling-points-item-icon{
                 width: 48px;
@@ -178,6 +181,7 @@
 }
 
 .overview-card-item-image{
+    display: block;
     height: 188px;
     overflow: hidden;
     cursor: pointer;
