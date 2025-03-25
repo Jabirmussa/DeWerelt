@@ -55,17 +55,43 @@
             }
             .btn{
                 padding: rem(16px)  rem(24px) rem(16px) 54px;
-                svg{
+                &::after, &::before{
+                    content: '';
                     position: absolute;
-                    top: 50%;
-                    left: 24px;
-                    transform: translateY(-50%);
                     width: 18px;
-                    transition: all 0.4s ease-in-out;
+                    aspect-ratio: 1 / 1;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    background-image: url(images/chevron-right.svg);
                 }
+                &::after{
+                    right: -5px;
+                    transition: all 0.4s ease-out;
+                    opacity: 0;
+                }
+                &::before{
+                    left: 24px;
+                    transition: all 0.4s ease-out;
+                }
+            
+                span{
+                    position: relative;
+                    left: 0;
+                    transition: left 0.4s ease-in-out;
+                }
+            
                 &:hover{
-                    svg{
-                        left: 30px;
+                    span{
+                        left: -20px;
+                    }
+                    &::after{
+                        right: 15px;
+                        opacity: 1;
+                        transition: all 0.6s ease-in;
+                    }
+                    &::before{
+                        left: -10px;
+                        opacity: 0;
                     }
                 }
             }
@@ -216,7 +242,7 @@
         height: 360px;
     }
     img{
-        transition: all 0.2s ease-in-out;
+        transition: all 0.5s ease-in-out;
     }
     &:hover{
         img{
@@ -300,15 +326,17 @@
     .btn-grey{
         background-color: transparent;
         color: $color-white;
-        svg{
-            path{
-                fill: #FFFFFF;
-            }
-        }
+       &::after, &::before{
+            background-image: url(images/chevron-right-white.svg);
+       }
     }
-    .btn{
+    .btn-bordered{
         border-color: $color-white;
         color: $color-white;
+        &:hover{
+            background-color: $color-white;
+            color: $color-black;
+        }
     }
 }
 
