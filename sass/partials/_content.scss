@@ -115,6 +115,9 @@
         margin: 0 10px !important;
         opacity: 1;
         @include breakpoint-tablet{
+            width: 145px;
+        }
+        @include breakpoint-desktop-small{
             width: 224px;
         }
         &.swiper-pagination-bullet-active{
@@ -215,11 +218,14 @@
     align-items: flex-end;
     background: $color-black;
     overflow: hidden;
-   
 }
 
 .overview-card-item{
     background-color: #EEEEEE;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    grid-column-end: span 6;
     @include grid-column-span(4);
     @include breakpoint-tablet{
         @include grid-column-span(6);
