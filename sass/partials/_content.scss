@@ -166,7 +166,7 @@
                 }
             }
             .selling-points-item-text{
-                h3{
+                h2{
                     color: #3E3939;
                     font-size: rem(20px);
                     margin-bottom: 24px;
@@ -241,14 +241,14 @@
 
 .overview-card-item-image{
     display: block;
-    height: 188px;
     overflow: hidden;
     cursor: pointer;
-    @include breakpoint-tablet{
-        height: 360px;
-    }
     img{
+        // height: 188px;
         transition: all 0.5s ease-in-out;
+        @include breakpoint-tablet{
+            height: 100%;
+        }
     }
     &:hover{
         img{
@@ -280,8 +280,8 @@
     @include grid-column-span(2);
     height: 188px;
     @include breakpoint-tablet{
+        height: auto;
         @include grid-column-span(1);
-        height: 416px;
     }
 }
 
@@ -305,6 +305,7 @@
     top: 0;
     left: 0;
     z-index: 1;
+  
     &::before{
         content: '';
         position: absolute;
@@ -318,14 +319,15 @@
     }
 }
 .quote-content{
-    margin-top: 39px;
     max-width: 1024px;
-    h2{
+    @include breakpoint-desktop-small{
+        margin-top: 39px;
+    }
+    blockquote{
         font-family: $font-family-title;
         color: $color-white;
         margin-bottom: 33px;
-        letter-spacing: -1px;
-        @include breakpoint-desktop-small{
+        @include breakpoint-tablet{
             letter-spacing: 0;
         }
     }

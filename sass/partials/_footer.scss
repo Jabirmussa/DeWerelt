@@ -24,8 +24,17 @@ footer{
         h2, h3, h4, p, a{
             color: $color-black;
         }
-        h1{
+        h2{
+            font-family: $font-family-title;
+            font-size: rem(40px);
+            margin-bottom: rem(30px);
             letter-spacing: -1px;
+            line-height: rem(50px);
+            @include breakpoint-desktop-small{
+                margin-bottom: rem(55px);
+                font-size: rem(56px);
+                line-height: rem(58px);
+            }
         }
         .credits{
             @include breakpoint-tablet{
@@ -63,6 +72,9 @@ footer{
                     gap: 12px;
                     justify-content: center;
                     a{
+                        img{
+                            height: auto;
+                        }
                         transition: scale 0.4s ease-in-out;
                         &:hover{
                             scale: 1.2;
