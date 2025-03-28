@@ -6,13 +6,11 @@ header{
     width: 100%;
     z-index: 100;
     padding: rem(40px) 0 0;
-    // height: rem(74px);
     
     @include breakpoint-tablet {
         height: auto;
     }
 
-    
     .wrapper{
         display: flex;
         flex-wrap: wrap;

@@ -748,5 +748,89 @@
             font-size: 20px;
         }
     }
-   
+}
+
+.faq .wrapper{
+    display: flex;
+    flex-direction: column;
+    @include breakpoint-tablet {
+        flex-direction: row;
+        gap: 80px;
+    }
+    .faq-title{
+        max-width: 464px;
+    }
+    .details{
+        max-width: 768px;
+        margin-bottom: 48px;
+        @include breakpoint-tablet {
+            margin-bottom: 80px;
+        }
+        p{
+            margin-bottom: 16px;
+        }
+        .detail-items{
+            display: none;
+            @include breakpoint-tablet {
+                margin-bottom: 80px;
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: row;
+                gap: 32px;
+            }
+            .detail-item{
+                h3{
+                    font-size: 20px;
+                    line-height: 140%;
+                    margin-bottom: 8px;
+                }
+                p{
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
+
+.faq-items{
+    width: 100%;
+    .faq-item{
+        padding: 20px 0;
+        width: 100%;
+        border-top: 1px solid $color-black;
+        .question{
+            display: flex;
+            justify-content: space-between;
+        }
+        &:last-child{
+            border-bottom: 1px solid $color-black;
+        }
+        h4{
+            font-size: 18px;
+            margin-bottom: 0;
+            color: $color-black;
+            @include breakpoint-tablet {
+                font-size: 20px;
+            }
+        }
+        svg{
+            cursor: pointer;
+            margin-right: 10px;
+            transition: transform .5s ease-in;
+        }
+        .answer{
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 1.4s ease-in-out;
+            p{
+                margin-top: 15px;
+            }
+        }
+        &.active .answer{
+            max-height: 300px;
+        }
+        &.active svg{
+            transform: rotate(180deg);
+        }
+    }
 }
