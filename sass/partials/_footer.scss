@@ -8,16 +8,48 @@ footer{
     }
 
     .wrapper{
-        @include grid-layout(1, 48px, 48px);
+        @include grid-layout(1, 48px, 0px);
         @include breakpoint-tablet{
+            @include grid-layout(2, 64px, 80px);
+        }
+        
+        @include breakpoint-desktop-small{
             @include grid-layout(2, 192px, 80px);
         }
         
         .footer-content{
+            margin-bottom: 48px;
+            @include breakpoint-tablet{
+                margin-bottom: 0;
+            }
            .btns{
             margin-top: 48px;
             @include breakpoint-tablet{
                 margin-top: 24px;
+            }
+           }
+
+           .footer-links{
+            display: flex;
+            gap: 32px;
+            flex-direction: column;
+            @include breakpoint-tablet {
+                flex-direction: row;
+            }
+            ul{
+                li{
+                    padding: 8px 0;
+                    @include breakpoint-desktop-small {
+                        min-width: 176px;
+                    }
+                    a{
+                        text-decoration: none;
+                        font-weight: bold;
+                        &:hover{
+                            color: #797979;
+                        }
+                    }
+                }
             }
            }
         }

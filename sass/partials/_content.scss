@@ -253,25 +253,6 @@
     }
 }
 
-.header-image{
-    position: relative;
-    width: 100%;
-    height: rem(300px);
-    display: flex;
-    flex-wrap: wrap;
-    @include breakpoint-desktop-small{
-        height: rem(430px);
-    }
-}
-
-.header-image-image{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
 .overview{
     .wrapper{
         @include grid-layout(4, 24px, 24px);
@@ -749,6 +730,9 @@
         }
     }
 }
+.faq{
+    background-color: $color-grey-light;
+}
 
 .faq .wrapper{
     display: flex;
@@ -830,7 +814,65 @@
             max-height: 300px;
         }
         &.active svg{
-            transform: rotate(180deg);
+            transform: rotate(45deg);
+        }
+    }
+}
+
+.header-image{
+    background-color: $color-grey-light;
+    padding-top: 75px;
+    @include breakpoint-tablet {
+        padding-top: 160px;  
+    }
+}
+.header-image-text{
+    padding: 48px 0;
+    @include breakpoint-tablet{
+        padding: 80px 0;
+        display: flex;
+        justify-content: space-between;
+        gap: 80px;
+    }
+    h1{
+        flex: 1;
+        max-width: 616px;
+      }
+    .header-image-text-btn{
+      flex: 1;
+      @include breakpoint-desktop-small{
+        max-width: 616px;
+      }
+     
+    }
+    P{
+        @include breakpoint-tablet{
+            font-size: 18px;
+        }
+    }
+}
+
+.header-image-image{
+    width: 100%;
+    height: 375px;
+    @include breakpoint-desktop-small{
+        height: 703px;
+    }
+    >img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.slider-image-text.normal{
+    .slider-image-text-items{
+        @include grid-layout(1);
+        @include breakpoint-tablet {
+            @include grid-layout(2);
+        }
+        @include breakpoint-desktop-small {
+            @include grid-layout(3);
         }
     }
 }

@@ -99,3 +99,22 @@ const swiper3 = new Swiper('.swiper3', {
     el: '.swiper-pagination',
   },
 });
+
+//faq
+const questions = document.querySelectorAll('.faq-item');
+if(questions){    
+    questions.forEach(question => {
+        question.addEventListener('click', () => {
+            if (question.classList.contains('active')) {
+                question.classList.remove('active');
+            } else {
+                questions.forEach(item => {
+                    if (item !== question) {
+                        item.classList.remove('active');
+                    }
+                });
+                question.classList.add('active');
+            }
+        });
+    });
+}
