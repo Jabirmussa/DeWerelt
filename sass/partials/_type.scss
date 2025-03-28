@@ -52,8 +52,7 @@ p{
     }
 }
 
-p:has(span){
-    font-weight: bold;
+p:has(strong){
     margin-bottom: 12px;
 }
 

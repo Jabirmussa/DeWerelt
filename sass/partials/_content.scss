@@ -2,6 +2,34 @@
     position: relative;
 }
 
+.tabs{
+    display: none;
+    width: 100%;
+    padding: 0;
+    position: absolute;
+    bottom: 100px;
+    color: #fff;
+    text-align: center;
+    .swiper-wrapper{
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        transform: translate3d(0, 0, 0) !important;
+        .swiper-slide{
+            width: 145px !important;
+            cursor: pointer;
+            @include breakpoint-desktop-small {
+                width: 224px !important;
+            }
+        }
+    }
+    @include breakpoint-tablet {
+        display: block;
+    }
+}
+
 .hero{
     position: relative;
     height: 100dvh;
@@ -50,8 +78,15 @@
                 margin: 0;
                 max-width: 56ch;
             }
-            h1{
+            h1, p{
                 color: $color-white;
+            }
+            
+            p{
+                font-size: 16px;
+                @include breakpoint-tablet {
+                    font-size: 18px;
+                }
             }
             .btn{
                 padding: rem(16px)  rem(24px) rem(16px) 54px;
@@ -98,6 +133,40 @@
         }
     }
 }
+
+.hero-home{
+    .wrapper{
+        .hero-content{
+            h1{
+                max-width: 10ch;
+                margin-bottom: 20px;
+                @include breakpoint-tablet {
+                    margin-bottom: 24px;
+                }
+            }
+            .btn-bordered{
+                border-color: $color-white;
+                color: $color-white;
+                &:hover{
+                    border-color: #000;
+                }
+            }
+            .btn{
+                &::after, &::before{
+                    display: none;
+                }
+                padding: rem(16px)  rem(24px) rem(14px) 24px;
+                &:hover{
+                    span{
+                        left: 0;
+                    }
+                    @extend %focus-properties;
+                }
+            }
+        }
+    }
+}
+
 .swiper {
     width: 100%;
     height: 100%;
@@ -157,6 +226,7 @@
 
             .selling-points-item-icon{
                 padding: 4px;
+                padding-bottom: 0;
                 width: 40px;
                 aspect-ratio: 1 / 1;
                 margin-bottom: 12px;
@@ -174,6 +244,9 @@
                         font-size: rem(24px);
                         margin-bottom: 30px;
                     }
+                }
+                p{
+                    margin-bottom: 0;
                 }
             }
         }
@@ -263,6 +336,28 @@
         @include grid-layout(2, 77px, 32px);
     }
 }
+.text-image-reverse{
+    .text-image-content{
+        margin-bottom: 16px;
+        @include grid-column-span(2);
+        @include breakpoint-tablet{
+            @include grid-column-span(1);
+            align-self: center ;
+            p{
+                font-size: 18px;
+            }
+        }
+    }
+    
+    .text-image-image{
+        @include grid-column-span(2);
+        height: 188px;
+        @include breakpoint-tablet{
+            height: auto;
+            @include grid-column-span(1);
+        }
+    }       
+}
 
 .text-image-content{
     margin-bottom: 16px;
@@ -285,6 +380,25 @@
     }
 }
 
+.text-image-reverse{
+    .text-image-content{
+        @include grid-column-span(2);
+        @include breakpoint-tablet{
+            @include grid-column-span(1);
+            @include grid-column-start(2);
+        }
+    }
+    
+    .text-image-image{
+        @include grid-column-span(2);
+        @include breakpoint-tablet{
+            @include grid-column-span(1);
+            @include grid-column-start(1);
+            @include grid-row-start(1);
+        }
+    }       
+}
+
 .quote{
     position: relative;
     @include breakpoint-desktop-small{
@@ -305,7 +419,9 @@
     top: 0;
     left: 0;
     z-index: 1;
-  
+}
+
+.dark{
     &::before{
         content: '';
         position: absolute;
@@ -314,7 +430,7 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background: $color-black;
+        background: #000;
         opacity: 50%;
     }
 }
@@ -453,7 +569,7 @@
             position: relative;
             border-radius: 50%;
             width: 42px;
-            aspect-ratio: 1 / 1;
+            height: 42px;
             border: 1px solid #000;
             top: 4px;
             left: 0;
@@ -465,4 +581,172 @@
             }
         }
     }
+}
+
+.nature-features{
+    .wrapper{
+        @include breakpoint-tablet{
+            @include grid-layout(2, 80px, 35px);
+        }
+        p{
+            margin-bottom: 50px;
+            @include breakpoint-tablet{
+                line-height: 150%;
+               font-size: 18px;
+
+           }
+        }
+    }
+}
+.nature-features-ups-items{
+    
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+    @include breakpoint-tablet{
+        flex-direction: row;
+        @include grid-column-span(2);
+        justify-content: space-between;
+    }
+}
+
+.ups-item{
+.ups-item-icon{
+    margin-left: 7px;
+}
+.ups-item-text{
+    h2{
+        margin: 12px 0 30px 0;
+        font-size: 20px;
+        @include breakpoint-tablet{
+            margin: 22px 0 26px 0;
+            font-size: 24px;
+        }
+    }
+    p{
+        display: none;
+        @include breakpoint-tablet{
+            display: block;
+            font-size: 16px;
+            margin-bottom: 32px;
+        }
+    }
+
+}
+}
+
+// slider-image-text
+
+.slider-image-text{
+    background-color: $color-white;
+    position: relative;
+    overflow: hidden;
+    // &::before{
+    //     @include breakpoint-desktop-small{
+    //         content: '';
+    //         width: 400px;
+    //         height: 100%;
+    //         background-color: hotpink;
+    //         position: absolute;
+    //         top: 0;
+    //         left: -116px;
+    //         z-index: 8;
+    //     }
+    // }
+    // we need help
+}
+
+
+.slider-image-text-content{
+    position: relative;
+    margin-bottom: 48px;
+    @include breakpoint-tablet{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 50px;
+
+    }
+    .slider-image-text-content-text{
+        @include breakpoint-tablet{
+            max-width: 500px;
+        }
+        @include breakpoint-desktop-small{
+            max-width: 768px;
+        }
+        p:has(strong){
+            margin-bottom: 16px;
+        }
+        h2{
+            margin-bottom: 10px;
+            @include breakpoint-tablet{
+                margin-bottom: 20px;
+            }
+        }
+        p{
+            font-size: 16px;
+            @include breakpoint-tablet{
+                font-size: 18px;
+                line-height: 150%;
+                
+            }
+        }
+    }
+
+}
+.slider-image-text-items{
+
+    display: flex;
+    margin-bottom: 70px;
+    gap: 32px;
+    @include breakpoint-desktop-small{
+        flex-direction: row;
+        gap: 32px;
+    }
+
+}
+.slider-image-text-item{
+
+    .btn{
+        display: flex;
+        justify-content: center;
+        padding: rem(12px)  rem(24px) rem(10px) 24px;
+    }
+}
+.silder-image-item{
+
+    display: block;
+    height: 198px;
+    margin-bottom: 16px;
+    @include breakpoint-tablet{
+        height: 300px;
+    }
+    >img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+ 
+}
+.slider-item-content{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    .slider-item-text{
+        h4{
+            font-size: 18px;
+            margin-bottom: 0;
+            line-height: 150%;
+        }
+        p{
+            margin-bottom: 0;
+            font-size: 14px;
+        }
+    }
+    .slider-item-price{
+        h4{
+            font-size: 20px;
+        }
+    }
+   
 }

@@ -5,39 +5,92 @@ header{
     left: 0;
     width: 100%;
     z-index: 100;
-    padding: rem(10px) 0 0;
-    height: rem(60px);
-
-    @include breakpoint-desktop-small{
+    padding: rem(40px) 0 0;
+    // height: rem(74px);
+    
+    @include breakpoint-tablet {
         height: auto;
     }
+
     
     .wrapper{
-        @include breakpoint-desktop-small{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        background-color: $color-white;
+        border-radius: 5px;
+        padding: 16px 32px 16px 32px; 
+
+        
+        .header-burger{
             display: flex;
-            flex-wrap: wrap;
-            justify-content: end;
+            flex-direction: column;
+            gap: 3px;
+            @include breakpoint-tablet {
+                display: none;
+            }
+            span{
+                display: block;
+                background-color: $color-black;
+                width: 16px;
+                height: 2px;
+            }
+        }
+        
+        .menu-items{
+            display: none;
+            position: absolute;
+            top: 62px;
+            left: 0;
+            width: 100%;
+            align-items: center;
+            gap: 32px;
+            flex-direction: column;
+            background-color: $color-white;
+            border-bottom-right-radius: 5px;
+            border-bottom-left-radius: 5px;
+            padding: 0 20px 20px 20px;
+            transition: display 0.4s ease-in-out;
+            .menu-is-open &{
+                display: flex;
+            }
+            .menu-item{
+                width: 100%;
+                text-align: center;
+            }
+            a{
+                text-decoration: none;
+            }
+            @include breakpoint-tablet {
+                display: flex;
+                padding: 0;
+                top: 0;
+                flex-direction: row;
+                width: auto;
+                position: relative;
+                .menu-item{
+                    width: auto;
+                    text-align: center;
+                }
+            }
         }
     }
     
-    
     &.fixed{
-        background: $color-black;
-        padding-bottom: rem(10px);
+       .wrapper{
+        box-shadow: 5px 5px 25px 5px rgba(0, 0, 0, 0.158);
+       }
     }
 }
 
 .header-logo{
     transition: all 0.3s ease-in-out;
-    position: absolute;
-    top: 0;
-    left: 0;
     display: block;
-    width: rem(80px);
-    @include breakpoint-desktop-small{
-        width: rem(100px);
-    }
-    .fixed & {
-        width: rem(80px);
+    width: rem(84px);
+    height: 36px;
+    @include breakpoint-tablet {
+        top: 20px;
+        left: 32px;
     }
 }

@@ -154,10 +154,7 @@
 }
 
 .header-burger {
-    position: absolute;
-    top: rem(30px);
-    transform: translateY(-50%);
-    right: rem(20px);
+    position: relative;
     transition: transform .3s ease;
     transform-origin: center;
 
@@ -166,7 +163,7 @@
     }
 
     .menu-is-open & {
-        transform: translateY(-50%) rotate(-90deg);
+        transform: rotate(-90deg);
     }
 
     .fixed & {

@@ -6,17 +6,18 @@
     font-size: rem(17px);
     background: $color-white;
     color: $color-black;
-    padding: rem(16px)  rem(24px) rem(14px) 24px;
+    padding: rem(15px)  rem(24px) rem(15px) rem(24px);
     text-decoration: none;
     border-radius: 0;
     line-height: 16px;
     border-radius: 5px;
     overflow: hidden;
+    cursor: pointer;
 }
 
 %focus-properties {
-    // color: $color-white;
-    // background: $color-black;
+    color: $color-white;
+    background: $color-black;
 }
 
 .btn-center{
@@ -27,7 +28,7 @@
     transition: all 0.2s ease-in-out;
     @extend %control-properties;
     &:hover{
-        @extend %focus-properties;
+        // @extend %focus-properties;
     }
 }
 
@@ -41,6 +42,17 @@
     &:hover{
         background-color: $color-black;
         color: $color-white;
+    }
+}
+
+.btn-black{
+    background-color: #3E3939;
+    color: $color-white;
+    border: 1px solid #fff ;
+    &:hover{
+        background-color: transparent;
+        color: #3E3939;
+        border-color: #3E3939;
     }
 }
 
