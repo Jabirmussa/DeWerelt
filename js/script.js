@@ -118,3 +118,30 @@ if(questions){
         });
     });
 }
+
+//
+document.querySelectorAll('[id="select-tags"]').forEach(select => {
+    new TomSelect(select, {
+        // sortField: {
+        //     field: "text",
+        //     direction: "asc"
+        // },
+        render: {
+            item: function (item, escape) {
+                let icon = item.$option.dataset.icon;
+                let div = document.createElement("div");
+                div.innerHTML = icon;
+                return `<div><span>${escape(item.text)}</span>${div.innerHTML} </div>`;
+            }
+        }
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+    flatpickr("#datepicker", {
+        dateFormat: "d-m-Y",
+        locale: "pt",
+        allowInput: true,
+    });
+});
+

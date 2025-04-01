@@ -23,7 +23,7 @@ h1{
     }
 }
 
-h2, h3, blockquote{
+h2, blockquote{
     font-size: rem(32px);
     margin-bottom: rem(20px);
     @include breakpoint-tablet{
@@ -31,7 +31,9 @@ h2, h3, blockquote{
         margin-bottom: rem(24px);
     }
 }
-
+h3{
+    font-size: 18px;
+}
 
 h4{
     font-size: rem(22px);

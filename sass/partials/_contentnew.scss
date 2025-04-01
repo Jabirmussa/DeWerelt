@@ -1,0 +1,106 @@
+.price-list-title{
+    text-align: center;
+    h2{
+      margin-bottom: 48px;
+      @include breakpoint-tablet{
+        margin-bottom: 80px;
+      }
+    }
+}
+
+.pricing-cards {
+@include grid-layout(1);
+@include breakpoint-tablet{
+  @include grid-layout(8);
+}
+@include breakpoint-desktop-small{
+  @include grid-layout(12);
+}
+}
+
+.card{
+  display: flex;
+  flex-direction: column;
+  justify-content:space-between;
+  padding: 32px;
+  background-color: #EEE;
+  @include grid-column-span(1);
+  @include breakpoint-tablet{
+    @include grid-column-span(4);
+  }
+  @include breakpoint-desktop-small{
+    @include grid-column-span(4);
+  }
+
+  .btn{
+    text-align: center;
+  }
+  
+  &.highlighted{
+    background: url(/images/cardimage.jpg);
+    background-position: center center;
+    background-size: cover;
+  }
+}
+.card-header{
+  .card-header-title{
+    margin-bottom: 16px;
+    @include breakpoint-desktop-small{
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: start;
+      flex-wrap: wrap;
+     gap: 30px;
+    }
+    .badge{
+      display: inline-block;
+      padding: 3px 12px;
+      border-radius: 5px;
+      background-color: #3E3939;
+      color: white;
+      margin-bottom: 32px;
+      @include breakpoint-desktop-small{
+        margin-bottom: 0;
+      }
+    }
+    h4{
+      margin-bottom: 0;
+    }
+  }
+  h4{
+    font-size: 20px;
+    margin-bottom: 16px;
+    @include breakpoint-tablet{
+      font-size: 24px;
+    }
+  }
+  .price{
+      font-size: 24px;
+      border-bottom: 1px solid $color-black;
+  }
+  .price-details{
+    font-size: 16px;
+    margin-bottom: 32px;
+  }
+}
+
+.card-text{
+  margin: 34px 0 45px 0;
+  ul{
+    li{
+      position: relative;
+      margin: 0 0px 16px 40px;
+      &::before{
+        content: '';
+        position: absolute;
+        width: 18px;
+        aspect-ratio: 1 / 1;
+        top: 50%;
+        left: -40px;
+        transform: translateY(-50%);
+        background-image: url(images/shape-right.svg);
+        background-repeat: no-repeat;
+        }
+    }
+    }
+}

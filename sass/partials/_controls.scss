@@ -48,7 +48,7 @@
 .btn-black{
     background-color: #3E3939;
     color: $color-white;
-    border: 1px solid #fff ;
+    border: 1px solid transparent;
     &:hover{
         background-color: transparent;
         color: #3E3939;
@@ -100,35 +100,5 @@
     }
 }
 
-
-form{
-    position: relative;
-    max-width: rem(700px);
-    input[type=text]{
-        background: $color-white;
-        height: rem(60px);
-        padding: rem(20px) rem(30px);
-        border-radius: rem(30px);
-        @include placeholder{
-            color: rgba($color-black, 0.6);
-            font-weight: 400;
-        }
-    }
-    input[type=submit]{
-        position: absolute;
-        top: 0;
-        right: 0;
-        background: $color-black;
-        height: rem(60px);
-        border-radius: rem(30px);
-        color: $color-white;
-        font-weight: 800;
-        padding: 0 rem(30px);
-        text-transform: uppercase;
-        &:hover{
-            cursor: pointer;
-        }
-    }
-}
 
 #site-container .gform_wrapper {}

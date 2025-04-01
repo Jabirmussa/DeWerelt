@@ -23,6 +23,10 @@
             @include breakpoint-desktop-small {
                 width: 224px !important;
             }
+            p{
+                font-size: 12px;
+                margin-bottom: 0;
+            }
         }
     }
     @include breakpoint-tablet {
@@ -540,7 +544,7 @@
         position: relative;
         width: auto !important;
         .swiper-pagination-bullet{
-            background-color: #000;
+            background-color: $color-black;
         }
     }
     .controls{
@@ -551,14 +555,20 @@
             border-radius: 50%;
             width: 42px;
             height: 42px;
-            border: 1px solid #000;
+            border: 1px solid $color-black;
             top: 4px;
             left: 0;
             right: 0;
             &::after{
-                color: #000;
+                color: $color-black;
                 font-size: 8px;
                 font-weight: bold;
+            }
+            &:hover{
+                background-color: $color-black;
+                &::after{
+                    color: $color-white;
+                }
             }
         }
     }
@@ -763,6 +773,10 @@
                 gap: 32px;
             }
             .detail-item{
+                min-width: 168px;
+                &:last-child{
+                    min-width: auto;
+                }
                 h3{
                     font-size: 20px;
                     line-height: 140%;
@@ -800,12 +814,12 @@
         svg{
             cursor: pointer;
             margin-right: 10px;
-            transition: transform .5s ease-in;
+            transition: transform .3s ease-in;
         }
         .answer{
             max-height: 0;
             overflow: hidden;
-            transition: max-height 1.4s ease-in-out;
+            transition: all .3s ease-in-out;
             p{
                 margin-top: 15px;
             }
@@ -875,4 +889,49 @@
             @include grid-layout(3);
         }
     }
+}
+
+.form-dropdown{
+    padding: 60px 0 90px 0;
+    background-color: $color-grey-light;
+    .wrapper form{
+        display: flex;
+        gap: 36px;
+        // flex-wrap: wrap;
+    }
+    p{
+        margin-bottom: 8px;
+    }
+    .item{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .ts-control, .ts-dropdown, .datepicker-container, .flatpickr-calendar {
+        font-size: 16px;
+        min-width: 296px;
+        border-radius: 5px;
+        padding: 12px;
+        border: 1px solid #000;
+        color: #000;
+        background-color: transparent !important;
+    }
+    .option {
+        margin-bottom: 10px;
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+    .ts-dropdown .active {
+        background-color: #f5fafd00;
+        // color: #495c68;
+        border-radius: 3px;
+    }
+    .btn{
+        align-self: end;
+    }
+}
+
+.datepicker-container{
+    align-self: flex-end;
 }
