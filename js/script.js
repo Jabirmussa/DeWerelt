@@ -145,3 +145,25 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+const swiperLogo = new Swiper('.swiper-logo', {
+    direction: 'horizontal',
+    loop: true,
+    autoplay: {
+        delay: 600,
+      },
+      speed: 1000,
+    breakpoints: {
+        320: {
+            slidesPerView: 2,
+            spaceBetween: 20
+          },
+        768: {
+            slidesPerView: 5,
+            spaceBetween: 20
+          },
+        1024: {
+            slidesPerView: 7, 
+            spaceBetween: 70
+          }
+    },
+});

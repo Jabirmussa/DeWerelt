@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/tom-select@2.4.3/dist/css/tom-select.css" rel="stylesheet">
     <title>Landingspagina</title>
 </head>
 <body>
@@ -49,7 +51,7 @@
         </div>
     </section>
     <section class="selling-points with-padding">
-        <div class="wrapper">
+        <div class="wrapper selling-points-3-items">
             <div class="selling-points-item">
                 <div class="selling-points-item-icon">
                 <svg width="40" height="38" viewBox="0 0 40 38" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -63,8 +65,9 @@
             </div>
             <div class="selling-points-item">
                 <div class="selling-points-item-icon">
-                    <svg width="39" height="40" viewBox="0 0 39 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M37.73 0L35.3118 0.806045C31.1676 2.24593 26.7421 2.68779 22.395 2.09572C17.827 1.38682 13.1515 2.01676 8.93401 3.90932C6.6982 4.86135 4.73603 6.35751 3.22615 8.26158C1.71627 10.1656 0.706637 12.4171 0.289174 14.8111C-0.135476 17.1133 -0.0920369 19.4774 0.416899 21.7624C0.925834 24.0474 1.88984 26.2065 3.25139 28.1108C3.13048 28.534 3.00958 28.9572 2.90882 29.3804C2.09036 32.8605 1.68455 36.4249 1.69975 40H5.72998C5.9194 37.0737 6.31671 34.1646 6.9189 31.2947C9.71473 32.8044 12.8501 33.5744 16.0272 33.5315C18.9904 33.5295 21.9231 32.9333 24.6519 31.7783C39.9869 25.2292 37.9718 3.44584 37.9718 2.53904L37.73 0ZM23.0801 28.0705C17.8207 30.3073 11.5335 29.9244 8.00706 27.1637C8.60306 25.1708 9.42095 23.2512 10.4453 21.4408C11.2417 20.1379 12.1812 18.928 13.2464 17.8338C14.3347 16.7278 15.5605 15.7662 16.8937 14.9723C19.6485 13.325 22.7037 12.2427 25.8811 11.7884V9.7733C22.2253 9.64674 18.5918 10.3928 15.2816 11.9496C11.8971 13.6011 9.02675 16.144 6.97935 19.3048C6.21999 20.512 5.54662 21.7712 4.96424 23.073C4.03027 20.6838 3.76553 18.0851 4.19849 15.5567C4.48217 13.7865 5.21189 12.1176 6.3189 10.7074C7.4259 9.29724 8.87373 8.19212 10.5259 7.49622C12.9353 6.37009 15.5642 5.792 18.2237 5.80353C19.4731 5.80353 20.7023 5.92443 21.9919 6.02519C26.0309 6.5463 30.1317 6.30709 34.0826 5.3199C33.9416 10.8816 32.934 23.8791 23.0801 28.0705Z" fill="#3E3939"/>
+                    <svg width="31" height="40" viewBox="0 0 31 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M11.1035 39.576C11.3426 39.7632 11.6213 39.8933 11.9184 39.9563C12.2154 40.0194 12.5229 40.0138 12.8175 39.94L28.8175 35.94C29.2505 35.8323 29.6351 35.5828 29.9098 35.2312C30.1846 34.8796 30.3337 34.4462 30.3335 34V5.99998C30.3334 5.55386 30.1841 5.12058 29.9094 4.76906C29.6347 4.41754 29.2504 4.16795 28.8175 4.05998L12.8175 0.0599837C12.5228 -0.0123178 12.2156 -0.0168327 11.9189 0.0467786C11.6222 0.11039 11.3439 0.24047 11.1047 0.427227C10.8656 0.613985 10.672 0.852553 10.5384 1.12497C10.4048 1.3974 10.3347 1.69657 10.3335 1.99998V3.99998H2.3335C1.80306 3.99998 1.29436 4.2107 0.919283 4.58577C0.54421 4.96084 0.333496 5.46955 0.333496 5.99998V34C0.333496 34.5304 0.54421 35.0391 0.919283 35.4142C1.29436 35.7893 1.80306 36 2.3335 36H10.3335V38C10.3335 38.616 10.6175 39.198 11.1035 39.576ZM14.3335 4.56198L26.3335 7.56198V32.438L14.3335 35.438V4.56198ZM4.3335 32V7.99998H10.3335V32H4.3335Z" fill="#3E3939"/>
+                        <path d="M18.8175 22.318C19.7095 22.094 20.3335 21.294 20.3335 20.376V19.622C20.3332 19.0916 20.1223 18.583 19.747 18.2081C19.3717 17.8332 18.8629 17.6228 18.3325 17.623C17.8021 17.6233 17.2935 17.8343 16.9186 18.2095C16.5437 18.5848 16.3332 19.0936 16.3335 19.624V20.378C16.3336 20.6818 16.4029 20.9816 16.5361 21.2546C16.6693 21.5277 16.863 21.7667 17.1025 21.9537C17.3419 22.1407 17.6208 22.2707 17.9179 22.3338C18.2151 22.397 18.5227 22.3916 18.8175 22.318Z" fill="#3E3939"/>
                     </svg>
                 </div>
                 <div class="selling-points-item-text">
@@ -74,13 +77,50 @@
             </div>
             <div class="selling-points-item">
                 <div class="selling-points-item-icon">
-                    <svg width="36" height="40" viewBox="0 0 36 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M17.7778 15.5556H13.3333V0H8.88889V15.5556h3.44444V0H0V17.7778C0 21.4533 2.99111 24.4444 6.66667 24.4444H8.88889V40H13.3333V24.4444H15.5556C19.2311 24.4444 22.2222 21.4533 22.2222 17.7778V0H17.7778V15.5556ZM33.3333 0H31.1111C28.5356 0 26.6667 2.80444 26.6667 6.66667V24.4444H31.1111V40H35.5556V2.22222C35.5556 1.63285 35.3214 1.06762 34.9047 0.650874C34.4879 0.234126 33.9227 0 33.3333 0Z" fill="#3E3939"/>
+                    <svg width="33" height="40" viewBox="0 0 33 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M28.6665 0H4.6665C2.4605 0 0.666504 1.794 0.666504 4V38C0.666504 38.5304 0.877218 39.0391 1.25229 39.4142C1.62736 39.7893 2.13607 40 2.6665 40H30.6665C31.1969 40 31.7056 39.7893 32.0807 39.4142C32.4558 39.0391 32.6665 38.5304 32.6665 38V4C32.6665 1.794 30.8725 0 28.6665 0ZM28.6665 36H4.6665V4H28.6665V36Z" fill="#3E3939"/>
+                        <path d="M8.6665 8H14.6665V12H8.6665V8ZM18.6665 8H24.6665V12H18.6665V8ZM8.6665 16H14.6665V20H8.6665V16ZM18.6665 16.062H24.6665V20H18.6665V16.062ZM8.6665 24H14.6665V28H8.6665V24ZM18.6665 24H24.6665V28H18.6665V24Z" fill="#3E3939"/>
                     </svg>
                 </div>
                 <div class="selling-points-item-text">
                     <h2>4 grote zalen</h2>
                     <p>Ruime, moderne zalen met alle faciliteiten voor presentaties, congressen en grootschalige bijeenkomsten.</p>
+                </div>
+            </div>
+            <div class="selling-points-item">
+                <div class="selling-points-item-icon">
+                    <svg width="36" height="40" viewBox="0 0 36 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M32 0H12C9.794 0 8 1.794 8 4V16H4C1.794 16 0 17.794 0 20V38C0 38.5304 0.210714 39.0391 0.585786 39.4142C0.960859 39.7893 1.46957 40 2 40H34C34.5304 40 35.0391 39.7893 35.4142 39.4142C35.7893 39.0391 36 38.5304 36 38V4C36 1.794 34.206 0 32 0ZM4 20H16V36H4V20ZM32 36H20V20C20 17.794 18.206 16 16 16H12V4H32V36Z" fill="#3E3939"/>
+                        <path d="M16 8H20V12H16V8ZM24 8H28V12H24V8ZM24 16.062H28V20H24V16.062ZM24 24H28V28H24V24ZM8 24.002H12V28.002H8V24.002Z" fill="#3E3939"/>
+                    </svg>
+                </div>
+                <div class="selling-points-item-text">
+                    <h2>15 flexibele sub ruimtes</h2>
+                    <p>Break-outs, workshops of teamoverleg? Kies uit 15 ruimtes die meebewegen met jouw programma.</p>
+                </div>
+            </div>
+            <div class="selling-points-item">
+                <div class="selling-points-item-icon">
+                    <svg width="41" height="36" viewBox="0 0 41 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M37.8775 12.312L35.1415 4.102C34.7446 2.90697 33.9812 1.8674 32.9597 1.13102C31.9383 0.394632 30.7107 -0.00111641 29.4515 2.36555e-06H11.2155C9.95627 -0.00111641 8.72872 0.394632 7.70726 1.13102C6.68581 1.8674 5.92239 2.90697 5.5255 4.102L2.7895 12.312C2.06272 12.617 1.44205 13.1295 1.00519 13.7855C0.568321 14.4415 0.334674 15.2118 0.333496 16V26C0.333496 27.506 1.1795 28.804 2.4115 29.486C2.3855 29.618 2.3335 29.738 2.3335 29.876V34C2.3335 34.5304 2.54421 35.0391 2.91928 35.4142C3.29436 35.7893 3.80306 36 4.3335 36H6.3335C6.86393 36 7.37264 35.7893 7.74771 35.4142C8.12278 35.0391 8.3335 34.5304 8.3335 34V30H32.3335V34C32.3335 34.5304 32.5442 35.0391 32.9193 35.4142C33.2944 35.7893 33.8031 36 34.3335 36H36.3335C36.8639 36 37.3726 35.7893 37.7477 35.4142C38.1228 35.0391 38.3335 34.5304 38.3335 34V29.876C38.3335 29.738 38.2815 29.616 38.2555 29.486C38.8823 29.1443 39.4058 28.6405 39.7714 28.0273C40.1369 27.414 40.331 26.7139 40.3335 26V16C40.3335 14.342 39.3175 12.918 37.8775 12.312ZM4.3335 26V16H36.3335L36.3375 26H4.3335ZM11.2155 4H29.4495C30.3115 4 31.0755 4.548 31.3475 5.368L33.5595 12H7.1075L9.3175 5.368C9.45019 4.96959 9.70493 4.62305 10.0456 4.37752C10.3863 4.13198 10.7956 3.9999 11.2155 4Z" fill="#3E3939"/>
+                        <path d="M9.3335 24C10.9904 24 12.3335 22.6569 12.3335 21C12.3335 19.3431 10.9904 18 9.3335 18C7.67664 18 6.3335 19.3431 6.3335 21C6.3335 22.6569 7.67664 24 9.3335 24Z" fill="#3E3939"/>
+                        <path d="M31.3335 24C32.9904 24 34.3335 22.6569 34.3335 21C34.3335 19.3431 32.9904 18 31.3335 18C29.6766 18 28.3335 19.3431 28.3335 21C28.3335 22.6569 29.6766 24 31.3335 24Z" fill="#3E3939"/>
+                    </svg>
+                </div>
+                <div class="selling-points-item-text">
+                    <h2>400 parkeerplaatsen</h2>
+                    <p>Gratis parkeren direct voor de deur. Geen gedoe, gewoon zorgeloos arriveren.</p>
+                </div>
+            </div>
+            <div class="selling-points-item">
+                <div class="selling-points-item-icon">
+                    <svg width="37" height="38" viewBox="0 0 37 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18.6665 0C16.6887 0 14.7553 0.58649 13.1108 1.6853C11.4663 2.78412 10.1846 4.3459 9.42771 6.17317C8.67083 8.00043 8.4728 10.0111 8.85865 11.9509C9.2445 13.8907 10.1969 15.6725 11.5954 17.0711C12.994 18.4696 14.7758 19.422 16.7156 19.8079C18.6554 20.1937 20.6661 19.9957 22.4933 19.2388C24.3206 18.4819 25.8824 17.2002 26.9812 15.5557C28.08 13.9112 28.6665 11.9778 28.6665 10C28.6665 7.34784 27.6129 4.8043 25.7376 2.92893C23.8622 1.05357 21.3187 0 18.6665 0ZM18.6665 16C17.4798 16 16.3198 15.6481 15.3331 14.9888C14.3464 14.3295 13.5774 13.3925 13.1232 12.2961C12.6691 11.1997 12.5503 9.99334 12.7818 8.82946C13.0133 7.66557 13.5847 6.59647 14.4239 5.75736C15.263 4.91824 16.3321 4.3468 17.496 4.11529C18.6598 3.88378 19.8662 4.0026 20.9626 4.45672C22.059 4.91085 22.996 5.67988 23.6553 6.66658C24.3146 7.65327 24.6665 8.81331 24.6665 10C24.6665 11.5913 24.0344 13.1174 22.9091 14.2426C21.7839 15.3679 20.2578 16 18.6665 16ZM36.6665 38V36C36.6665 32.287 35.1915 28.726 32.566 26.1005C29.9405 23.475 26.3795 22 22.6665 22H14.6665C10.9535 22 7.39252 23.475 4.76701 26.1005C2.1415 28.726 0.666504 32.287 0.666504 36V38H4.6665V36C4.6665 33.3478 5.72007 30.8043 7.59544 28.9289C9.4708 27.0536 12.0143 26 14.6665 26H22.6665C25.3187 26 27.8622 27.0536 29.7376 28.9289C31.6129 30.8043 32.6665 33.3478 32.6665 36V38H36.6665Z" fill="#3E3939"/>
+                    </svg>
+                </div>
+                <div class="selling-points-item-text">
+                    <h2>Geschikt voor 10-600 personen</h2>
+                    <p>Van kleine teamsessies tot grote evenementen – onze locatie past zich aan jouw groepsgrootte aan.</p>
                 </div>
             </div>
         </div>
@@ -197,6 +237,227 @@
             </div>
         </div>
     </section>
+    <section class="logo-slider with-padding">
+        <div class="swiper-logo">
+            <h4>Zij gingen je voor:</h4>
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="images/placeholder-logo.png" alt="logo">
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/placeholder-logo2.png" alt="logo">
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/placeholder-logo.png" alt="logo">
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/placeholder-logo2.png" alt="logo">
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/placeholder-logo.png" alt="logo">
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/placeholder-logo2.png" alt="logo">
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/placeholder-logo.png" alt="logo">
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/placeholder-logo2.png" alt="logo">
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/placeholder-logo.png" alt="logo">
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/placeholder-logo2.png" alt="logo">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="text-image text-image-reverse white-background with-padding">
+        <div class="wrapper">
+            <div class="text-image-content">
+                <p><strong>Rondleiding</strong></p>
+                <h2>Ontdek alle zalen tijdens een rondleiding</h2>
+                <p>Met 15 zalen, een eigen restaurant, wellnesscentre,
+                    hotelkamers én de Veluwe als achtertuin is alles mogelijk.
+                    Van beurzen tot heidagen en van een symposium tot (meerdaags)
+                    congres. Je ontvangt bij ons moeiteloos groepen van 10 tot 
+                    600 personen. En dat op letterlijk de meest centrale 
+                    locatie van Nederland!
+                </p>
+                <div class="btns">
+                    <a href="" class="btn btn-bordered">
+                        <span>Rondleiding</span>
+                    </a>
+                    <a href="" class="btn btn-grey">
+                        <span>Arrangementen</span>
+                    </a>
+                </div>
+            </div>
+            <picture class="text-image-image">
+                <img width="616" height="416" src="images/textimage2.png" alt="text-image">
+            </picture>
+        </div>
+    </section>
+    <section class="quote with-padding">
+        <picture class="quote-image ">
+            <img width="1440" height="600" src="images/qoute1.jpg" alt="quote-image-2">
+        </picture>
+        <div class="wrapper">
+            <div class="quote-content">
+                <div class="quote-employer-info">
+                    <picture class="quote-employer-company-logo">
+                        <img src="images/logo-image.png" alt="employer-image-logo">
+                    </picture>
+                    <div class="quote-employer-info-user">
+                            <p><strong>Naam Achternaam</strong></p>
+                            <p>Functie, Naam Bedrijf</p>
+                    </div>
+                </div>
+
+                <blockquote>
+                    "De Werelt overtrof onze verwachtingen: een inspirerende locatie midden in de natuur, perfect voor focus en teambuilding."
+                </blockquote>
+                <div class="btns">
+                    <a href="" class="btn btn-bordered">
+                        <span>Bekijk de case</span>
+                    </a>
+                    <a href="" class="btn btn-grey">
+                        <span>Boeken</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="text-image white-background with-padding">
+        <div class="wrapper">
+            <div class="text-image-content">
+                <p><strong>Meerdaags vergaderen met impact</strong></p>
+                <h2>Ontdek alle zalen tijdens een rondleiding</h2>
+                <p>Een bijeenkomst hoeft niet binnen vier muren te blijven.
+                     Laat de natuur een inspiratiebron zijn en combineer 
+                     inhoud met ontspanning. Start de dag met een 
+                     strategische sessie en sluit af met een borrel 
+                     bij de open haard. Geniet van een goed diner, 
+                     slaap in een comfortabele kamer en begin de 
+                     volgende ochtend weer fris. Zo blijft de energie 
+                     hoog en de focus scherp.
+                </p>
+                <div class="btns">
+                    <a href="" class="btn btn-bordered">
+                        <span>Meer inspiratie</span>
+                    </a>
+                    <a href="" class="btn btn-grey">
+                        <span>Boeken</span>
+                    </a>
+                </div>
+            </div>
+            <picture class="text-image-image">
+                <img width="616" height="416" src="images/textimage3.jpg" alt="text-image">
+            </picture>
+        </div>
+    </section>
+    <section class="contact with-padding">
+        <div class="wrapper">
+            <div class="contact-text">
+                <p><strong>Offerte</strong></p>
+                <h2>Neem contact op</h2>
+                <p>We zijn benieuwd: wat ga jij organiseren? Vertel ons wat meer over jouw event,
+                    zodat het prijsvoorstel zo goed mogelijk aansluit bij jouw wensen!
+                </p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-form">
+                    <div class="input-group">
+                        <div class="input-title">
+                            <p>Soort event*</p>
+                        </div>
+                        <select id="select-tags" >
+                            <option value="1" data-icon='<svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.21973 0.219727L4.99998 3.43948L1.78023 0.219727L0.719727 1.28023L4.99998 5.56048L9.28023 1.28023L8.21973 0.219727Z" fill="#3E3939"/></svg>'>
+                                Selecteer een onderwerp...
+                            </option>
+                        </select>
+                    </div>  
+                    <div class="input-group">
+                        <div class="input-title">
+                            <p>Aantal gasten*</p>
+                        </div>
+                        <select id="select-tags" >
+                            <option value="1" data-icon='<svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.21973 0.219727L4.99998 3.43948L1.78023 0.219727L0.719727 1.28023L4.99998 5.56048L9.28023 1.28023L8.21973 0.219727Z" fill="#3E3939"/></svg>'>
+                                Selecteer een onderwerp...
+                            </option>
+                        </select>
+                    </div>  
+                    <div class="input-title">
+                        <p>Datum*</p>
+                    </div>
+                    <div class="datepicker-container">
+                        <input type="text" id="datepicker" class="custom-select" placeholder="dd-mm-jjjj">
+                    </div>
+                    <div class="input-group">
+                        <div class="input-title">
+                            <p>Bedrijfsnaam*</p>
+                        </div>
+                        <select id="select-tags" >
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <div class="input-title">
+                            <p>Naam*</p>
+                        </div>
+                        <select id="select-tags" >
+                        </select>
+                    </div>
+                    <div class="inputs-groups">
+                        <div class="input-group">
+                            <div class="input-title">
+                                <p>Email*</p>
+                            </div>
+                            <select id="select-tags" >
+                            </select>
+                        </div>
+                        <div class="input-group">
+                            <div class="input-title">
+                                <p>Telefoon*</p>
+                            </div>
+                            <select id="select-tags" >
+                            </select>
+                        </div>
+                    </div>
+                    <a href="" class="btn btn-black">Versturen</a>
+                </div>
+                <div class="contact-iformation">
+                    <div class="contact-detail">
+                        <div class="employer-info-contact">
+                            <p><strong>Bert Herikhuisen</strong></p>
+                            <p>Accountmanager</p>
+                            <picture class="employer-image">
+                                <img width="296" height="325" src="images/employeeimage.png" alt="text-image">
+                            </picture>
+                        </div>
+                        <div class="employer-info-contact">
+                            <p><strong>Bert Herikhuisen</strong></p>
+                            <p>Accountmanager</p>
+                            <picture class="employer-image">
+                                <img width="296" height="325" src="images/employeeimage2.png" alt="text-image">
+                            </picture>
+                        </div>
+                    </div>
+                    <div class="contact-detail">
+                        <div class="contact-detail-content">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
+                                <path d="M19.6095 14.1905C19.4857 14.0665 19.3388 13.9682 19.177 13.9011C19.0153 13.834 18.8419 13.7995 18.6668 13.7995C18.4917 13.7995 18.3183 13.834 18.1565 13.9011C17.9948 13.9682 17.8478 14.0665 17.7241 14.1905L15.5988 16.3158C14.6135 16.0225 12.7748 15.3558 11.6095 14.1905C10.4441 13.0251 9.77745 11.1865 9.48412 10.2011L11.6095 8.07579C11.7334 7.95207 11.8317 7.80513 11.8988 7.64338C11.9659 7.48163 12.0004 7.30823 12.0004 7.13312C12.0004 6.95801 11.9659 6.78462 11.8988 6.62286C11.8317 6.46111 11.7334 6.31417 11.6095 6.19045L6.27612 0.857121C6.1524 0.733194 6.00546 0.634877 5.84371 0.567796C5.68196 0.500715 5.50856 0.466187 5.33345 0.466187C5.15834 0.466187 4.98495 0.500715 4.82319 0.567796C4.66144 0.634877 4.5145 0.733194 4.39079 0.857121L0.774786 4.47312C0.26812 4.97979 -0.0172139 5.67579 -0.00654721 6.38645C0.0241195 8.28512 0.526786 14.8798 5.72412 20.0771C10.9215 25.2745 17.5161 25.7758 19.4161 25.8078H19.4535C20.1575 25.8078 20.8228 25.5305 21.3268 25.0265L24.9428 21.4105C25.0667 21.2867 25.165 21.1398 25.2321 20.978C25.2992 20.8163 25.3337 20.6429 25.3337 20.4678C25.3337 20.2927 25.2992 20.1193 25.2321 19.9575C25.165 19.7958 25.0667 19.6488 24.9428 19.5251L19.6095 14.1905ZM19.4401 23.1398C17.7761 23.1118 12.0828 22.6651 7.60945 18.1905C3.12145 13.7025 2.68679 7.98912 2.66012 6.35845L5.33345 3.68512L8.78145 7.13312L7.05745 8.85712C6.90073 9.01372 6.78551 9.2069 6.72219 9.41921C6.65887 9.63152 6.64945 9.85626 6.69479 10.0731C6.72679 10.2265 7.50945 13.8625 9.72279 16.0758C11.9361 18.2891 15.5721 19.0718 15.7255 19.1038C15.9422 19.1504 16.1671 19.1417 16.3796 19.0786C16.5921 19.0154 16.7853 18.8999 16.9415 18.7425L18.6668 17.0185L22.1148 20.4665L19.4401 23.1398Z" fill="#3E3939"/>
+                            </svg>
+                            <p><strong>Liever bellen?</strong></p>
+                            <p>Bereikbaar tussen 9:00 en 17:00</p>
+                            <a href="/" >088 000 1581</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <footer>
         <div class="wrapper">
             <div class="footer-content">
@@ -243,6 +504,8 @@
             </div>
         </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tom-select@2.4.3/dist/js/tom-select.complete.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>
 </body>

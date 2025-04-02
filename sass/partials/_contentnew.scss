@@ -104,3 +104,163 @@
     }
     }
 }
+
+.logo-slider{
+  overflow: hidden;
+  background-color: $color-grey-light;
+  h4{
+    text-align: center;
+    margin-bottom: 48px;
+    font-size: 32px;
+  }
+  .swiper-slide{
+    >img{
+      width: 200px;
+      height: 56px;
+      object-fit: contain;
+    }
+  }
+}
+
+.selling-points{
+  padding: rem(60px) 0;
+  background: #CCCCCC url(/images/background.png) no-repeat center center;
+  background-size: cover;
+  .wrapper{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 48px;
+        &.selling-points-3-items{
+          .selling-points-item{
+            @include breakpoint-tablet{
+              min-width: 405px;
+          }
+          }
+        }
+      .selling-points-item{
+          max-width: 100%;
+          @include breakpoint-tablet{
+              max-width: 292px;
+          }
+
+          .selling-points-item-icon{
+              padding: 4px;
+              padding-bottom: 0;
+              width: 40px;
+              aspect-ratio: 1 / 1;
+              margin-bottom: 12px;
+              @include breakpoint-tablet{
+                  width: 48px;
+                  margin-bottom: 24px;
+              }
+          }
+          .selling-points-item-text{
+              h2{
+                  color: #3E3939;
+                  font-size: rem(20px);
+                  margin-bottom: 24px;
+                  @include breakpoint-tablet{
+                      font-size: rem(24px);
+                      margin-bottom: 30px;
+                  }
+              }
+              p{
+                  margin-bottom: 0;
+              }
+          }
+    }
+  }
+}
+
+.contact{
+  background-color: #EEE;
+  .contact-content{
+    display: flex;
+    gap: 42px;
+    flex-direction: column;
+    @include breakpoint-tablet {
+      flex-direction: row;
+      gap: 80px;
+    }
+  }
+  .contact-text{
+    max-width: 50ch;
+  }
+  .contact-form{
+    p{
+      margin-bottom: 8px;
+    }
+    .ts-control, .ts-dropdown, .datepicker-container, .flatpickr-calendar {
+      font-size: 16px;
+      min-width: 296px;
+      border-radius: 5px;
+      padding: 12px;
+      border: 1px solid #000;
+      color: #000;
+      background-color: transparent !important;
+      margin-bottom: 24px;
+    }
+    .item{
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    .inputs-groups{
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+      flex-direction: column;
+      @include breakpoint-tablet {
+        flex-direction: row;
+      }
+      .ts-control{
+        min-width: 100%;
+        @include breakpoint-tablet {
+          min-width: 296px;
+        }
+      }
+    }
+  }
+  .contact-detail{
+    margin-bottom: 24px;
+    @include breakpoint-tablet {
+      margin-bottom: 40px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+    }
+    .employer-info-contact, .contact-detail-content{
+      margin-bottom: 24px;
+      @include breakpoint-tablet {
+        margin-bottom: 0;
+      }
+      p:has(strong){
+        font-size: 20px;
+        margin-bottom: 0;
+      }
+      p{
+        margin-bottom: 20px;
+        @include breakpoint-tablet {
+          margin-bottom: 24px;
+        }
+      }
+      .employer-image{
+        display: block;
+          height: 290px;
+          @include breakpoint-tablet {
+            height: 325px;
+        }
+      }
+    }
+    .contact-detail-content{
+      p{
+        margin-bottom: 8px;
+      }
+      svg{
+        margin-bottom: 16px;
+      }
+    }
+  }
+}
+

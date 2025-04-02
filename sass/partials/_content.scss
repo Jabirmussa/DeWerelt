@@ -211,52 +211,6 @@
     flex-wrap: wrap;
 }
 
-.selling-points{
-    padding: rem(60px) 0;
-    background: #CCCCCC url(/images/background.png) no-repeat center center;
-    background-size: cover;
-    .wrapper{
-        display: flex;
-        flex-wrap: wrap;
-        gap: 48px;
-        @include breakpoint-tablet{
-            justify-content: center;
-        }
-        .selling-points-item{
-            max-width: 100%;
-            @include breakpoint-tablet{
-                max-width: 292px;
-            }
-
-            .selling-points-item-icon{
-                padding: 4px;
-                padding-bottom: 0;
-                width: 40px;
-                aspect-ratio: 1 / 1;
-                margin-bottom: 12px;
-                @include breakpoint-tablet{
-                    width: 48px;
-                    margin-bottom: 24px;
-                }
-            }
-            .selling-points-item-text{
-                h2{
-                    color: #3E3939;
-                    font-size: rem(20px);
-                    margin-bottom: 24px;
-                    @include breakpoint-tablet{
-                        font-size: rem(24px);
-                        margin-bottom: 30px;
-                    }
-                }
-                p{
-                    margin-bottom: 0;
-                }
-            }
-        }
-    }
-}
-
 .overview{
     .wrapper{
         @include grid-layout(4, 24px, 24px);
@@ -387,7 +341,7 @@
 .quote{
     position: relative;
     @include breakpoint-desktop-small{
-        padding: 168px 0;
+        padding: 148px 0;
     }
     .wrapper{
         display: flex;
@@ -405,6 +359,38 @@
     left: 0;
     z-index: 1;
 }
+.quote-employer-info{
+    display: flex;
+    max-width: 298px;
+    gap: 30px;
+    margin-bottom: 30px;
+    justify-content: space-between;
+    .quote-employer-company-logo{
+      img{
+        display: block;
+        width: 120px;
+      height: 48px;
+        object-fit: cover;
+      }
+    }
+    .quote-employer-info-user{
+      position: relative;
+      color: $color-white;
+      p{
+        margin-bottom: 0;
+      }
+      &::before{
+        position: absolute;
+        content: '';
+        top: 0;
+        left: -20px;
+        width: 1px;
+        height: 100%;
+        background-color: $color-white;
+    }
+   }
+  }
+
 
 .dark{
     &::before{
@@ -421,9 +407,6 @@
 }
 .quote-content{
     max-width: 1024px;
-    @include breakpoint-desktop-small{
-        margin-top: 39px;
-    }
     blockquote{
         font-family: $font-family-title;
         color: $color-white;
@@ -902,10 +885,8 @@
     p{
         margin-bottom: 8px;
     }
-    .item{
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
+    .btn{
+        align-self: end;
     }
     .ts-control, .ts-dropdown, .datepicker-container, .flatpickr-calendar {
         font-size: 16px;
@@ -916,22 +897,27 @@
         color: #000;
         background-color: transparent !important;
     }
-    .option {
-        margin-bottom: 10px;
-        &:last-child{
-            margin-bottom: 0;
-        }
+}
+.item{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.option {
+    margin-bottom: 10px;
+    &:last-child{
+        margin-bottom: 0;
     }
-    .ts-dropdown .active {
-        background-color: #f5fafd00;
-        // color: #495c68;
-        border-radius: 3px;
-    }
-    .btn{
-        align-self: end;
-    }
+}
+.ts-dropdown .active {
+    background-color: #f5fafd00;
+    border-radius: 3px;
 }
 
 .datepicker-container{
     align-self: flex-end;
+}
+
+.white-background{
+    background-color: #fff;
 }
