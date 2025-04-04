@@ -178,7 +178,7 @@
     display: flex;
     gap: 42px;
     flex-direction: column;
-    @include breakpoint-tablet {
+    @include breakpoint-desktop-medium {
       flex-direction: row;
       gap: 80px;
     }
@@ -209,7 +209,6 @@
     .inputs-groups{
       display: flex;
       gap: 24px;
-      flex-wrap: wrap;
       flex-direction: column;
       @include breakpoint-tablet {
         flex-direction: row;
@@ -237,7 +236,6 @@
       }
       p:has(strong){
         font-size: 20px;
-        margin-bottom: 0;
       }
       p{
         margin-bottom: 20px;
@@ -254,6 +252,10 @@
       }
     }
     .contact-detail-content{
+      @include breakpoint-desktop-small {
+        min-width: 296px;
+        
+      }
       p{
         margin-bottom: 8px;
       }
@@ -264,3 +266,195 @@
   }
 }
 
+.blog{
+  .wrapper{
+    .blog-header{
+      max-width: 65ch;
+      margin-bottom: 48px;
+      p{
+        margin-bottom: 0;
+      }
+      p:has(strong){
+        margin-bottom: 10px;
+      }
+      @include breakpoint-tablet {
+        margin-bottom: 80px;
+      }
+    }
+    .blog-text-image{
+      display: flex;
+      gap: 48px;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 48px;
+      @include breakpoint-tablet {
+        flex-direction: row;
+        margin-bottom: 80px;
+      }
+      .blog-image{
+        height: 221px;
+        @include breakpoint-tablet {
+          height: 350px;
+        }
+        @include breakpoint-desktop-small {
+          height: 500px;
+        }
+      }
+      .blog-text{
+        .blog-text-info{
+          p{
+            margin-bottom: 0;
+            font-size: 14px;
+          }
+        }
+        p{
+          margin-bottom: 24px;
+        }
+        .btn{
+          padding: 0 32px 0 0;
+        }
+      }
+    }
+  }
+}
+.blog-text-info{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+  margin-bottom: 16px;
+  .categorie{
+    padding: 4px 8px;
+    background-color: #EEEEEE;
+    border-radius: 5px;
+  }
+}
+
+.blog-overview{
+  .blog-overview-filtre{
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 48px;
+    @include breakpoint-tablet {
+      margin-bottom: 64px;
+    }
+    .filtre-item{
+      cursor: pointer;
+      padding: 8px 16px;
+      &.selected{
+        border: 1px solid #000;
+        border-radius: 5px;
+      }
+    }
+  }
+  p{
+    margin-bottom: 0;
+  }
+}
+
+.blogs-items{
+  @include grid-layout(4);
+  @include breakpoint-tablet {
+    @include grid-layout(12);
+  }
+  .blog-item{
+    @include grid-column-span(4);
+    @include breakpoint-tablet {
+      @include grid-column-span(6);
+    }
+    @include breakpoint-desktop-small {
+      @include grid-column-span(4);
+    }
+    .blog-item-image{
+      height: 221px;
+      margin-bottom: 24px;
+      @include breakpoint-tablet {
+        height: 300px;
+      }
+    }
+    .blog-item-text{
+      p:has(strong){
+        margin-bottom: 0px;
+      }
+      p{
+        margin-bottom: 24px;
+      }
+      .btn{
+        padding: 0 32px 0 0;
+      }
+    }
+  }
+}
+
+.vacancies{
+  .wrapper{
+    display: flex;
+    gap: 48px;
+    flex-direction: column;
+    @include breakpoint-tablet {
+      flex-direction: row;
+      gap: 80px;
+    }
+
+    .vacancies-title{
+      max-width: 55ch;
+      p{
+        font-size: 18px;
+      }
+    }
+    .vacancy-item{
+      border-top: 1px solid #000;
+      padding: 30px 0;
+      .vacancy-item-title{
+        display: flex;
+        gap: 16px;
+        align-items: center;
+        margin-bottom: 16px;
+        p, h4{
+          margin: 0;
+        }
+        .vacancy-item-type{
+          padding: 4px 8px;
+          background-color: #EEEEEE;
+          border-radius: 5px;
+          font-size: 14px;
+        }
+      }
+      p{
+        margin-bottom: 24px;
+      }
+      .location-time{
+        display: flex;
+        gap: 24px;
+        align-items: center;
+        margin-bottom: 32px;
+        
+        p{
+          margin: 0;
+        }
+
+        .location, .time{
+          position: relative;
+          padding-left: 36px;
+          &::before{
+            content: '';
+            position: absolute;
+            width: 20px;
+            aspect-ratio: 1 / 1;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            background-image: url(/images/icon-location.svg);
+            background-repeat: no-repeat;
+          }
+        }
+        .time{
+          &::before{
+            background-image: url(/images/icon-clock.svg);
+          }
+        }
+      }
+    }
+  }
+}
