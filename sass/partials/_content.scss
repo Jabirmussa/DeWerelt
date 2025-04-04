@@ -562,7 +562,7 @@
         @include breakpoint-tablet{
             @include grid-layout(2, 80px, 35px);
         }
-        p{
+        > p{
             margin-bottom: 50px;
             @include breakpoint-tablet{
                 line-height: 150%;
@@ -598,7 +598,7 @@
             }
         }
         p{
-            display: none;
+            // display: none;
             @include breakpoint-tablet{
                 display: block;
                 font-size: 16px;
