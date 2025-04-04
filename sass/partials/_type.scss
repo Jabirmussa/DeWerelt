@@ -63,7 +63,7 @@ p:has(strong){
 }
 
 .text-container {
-    max-width: rem(700px);
+    max-width: rem(812px);
     p, ul, ol,
     blockquote,
     .embed-container,
@@ -119,11 +119,39 @@ p:has(strong){
         }
         
     }
+    picture{
+        display: block;
+        margin-bottom: 48px;
+        >img{
+            width: 100%;
+            height: 185px;
+            object-fit: cover;
+            @include breakpoint-tablet{
+                height: 450px;
+            }
+        }
+        blockquote {
+            font-size: 14px;
+            font-weight: normal;
+            margin: 0;
+        }
+    }
 
     blockquote {
         padding-left: 1em;
-        font-size: 1.4em;
-        line-height: 1.2;
+        font-size: 18px;
+        line-height: 140%;
         border-left: .1rem solid currentColor;
+        margin: 36px 0;
+        @include breakpoint-tablet{
+            font-size: 20px;
+        }
+    }
+    h4{
+        font-size: 24px;
+        margin: 24px 0 20px 0;
+        @include breakpoint-tablet{
+            font-size: 32px;
+        }
     }
 }

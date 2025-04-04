@@ -401,11 +401,18 @@
       max-width: 55ch;
       p{
         font-size: 18px;
+        margin-bottom: 0;
       }
     }
     .vacancy-item{
       border-top: 1px solid #000;
-      padding: 30px 0;
+      padding: 24px 0;
+      @include breakpoint-tablet {
+        padding: 30px 0;
+      }
+      &:last-child{
+        padding-bottom: 0;
+      }
       .vacancy-item-title{
         display: flex;
         gap: 16px;
@@ -428,10 +435,14 @@
         display: flex;
         gap: 24px;
         align-items: center;
-        margin-bottom: 32px;
+        margin-bottom: 24px;
+        @include breakpoint-tablet {
+          margin-bottom: 32px;
+        }
         
         p{
           margin: 0;
+          font-size: 18px;
         }
 
         .location, .time{
@@ -455,6 +466,94 @@
           }
         }
       }
+    }
+  }
+}
+
+.error{
+  background-color: $color-grey-light;
+  padding-top: 152px;
+  .wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .error-image{
+    margin-bottom: 20px;
+    
+    img{
+      width: 100px;
+      height: 50px;
+      object-fit: cover;
+    }
+  }
+  
+  .error-message{
+    text-align: center;
+    max-width: 560px;
+  }
+  
+  .error-links{
+    width: 100%;
+    max-width: 560px;
+    text-align: center;
+    margin-bottom: 20px;
+    
+    .button-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    
+    .btn{
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
+
+.socials{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  
+  a{
+    transition: scale 0.4s ease-in-out;
+    
+    &:hover{
+      scale: 1.2;
+    }
+    
+    img{
+      height: auto;
+    }
+  }
+} 
+
+.nature-features-bg{
+  background-color: $color-grey-light;
+  .nature-features-ups-items{ 
+    gap: 24px;
+  .ups-item{
+    max-width: 302px;
+  }
+}
+}
+
+.body-text{
+  .wrapper{
+    @include breakpoint-tablet{
+      display: flex;
+      gap: 80px;
+    }
+  }
+  .sidebar{
+    margin-bottom: 30px;
+    h2{
+      padding-bottom: 48px;
+      margin-bottom: 48px;
+      border-bottom: 1px solid $color-black;
     }
   }
 }
