@@ -472,7 +472,8 @@
 
 .error{
   background-color: $color-grey-light;
-  padding-top: 152px;
+  padding-top: 200px;
+  height: 100dvh;
   .wrapper{
     display: flex;
     flex-direction: column;
@@ -556,4 +557,17 @@
       border-bottom: 1px solid $color-black;
     }
   }
+}
+
+.slider-item-text-2{
+  h3 {
+    font-size: 24px;
+  }
+ #slider-item-text-p{
+    font-size: 16px;
+  }
+}
+
+.bg-grey{
+  background-color: $color-grey-light;
 }
